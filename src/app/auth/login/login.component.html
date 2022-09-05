@@ -1,0 +1,34 @@
+<div class="container">
+  <div>
+    <div>
+      <mat-card class="card">
+        <mat-card-title>Iniciar Sesión</mat-card-title>
+        <mat-card-content>
+          <form [formGroup]="form">
+            <mat-form-field>
+              <input type="email" matInput placeholder="Dirección de correo electrónico" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Contraseña</mat-label>
+              <input type="password" matInput formControlName="password">
+            </mat-form-field>
+
+            <br>
+            <button mat-button (click)="this.authSvc.loginWithGoogle()"><img src="assets/images/icons/loginGoogle.svg"></button>
+            <button mat-button (click)="loginGithub()"><img src="assets/images/icons/github-svgrepo-com(1).svg"></button>
+            <br>
+
+            <div class="button">
+              <button type="button" mat-button (click)="login()">Siguiente</button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container-prueba">
+  <p>¿No tienes una Cuenta? <a class="link" href="/register">Regístrate</a></p>
+</div>

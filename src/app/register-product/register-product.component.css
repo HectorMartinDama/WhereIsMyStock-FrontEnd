@@ -1,0 +1,15 @@
+.registrarProducto{
+  max-width: 550px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 230px;
+}
+
+.button{
+  display: flex;
+  justify-content: flex-end;
+}

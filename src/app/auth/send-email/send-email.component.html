@@ -1,0 +1,16 @@
+<div class="container">
+<mat-card class="confirmacionCuenta">
+  <mat-card-title>Confirmación de la Cuenta</mat-card-title>
+  <p>Para poder continuar debes de confirmar tu cuenta.</p>
+  <p>Le hemos enviado un correo con toda la información.</p>
+  <mat-divider inset></mat-divider>
+
+  <mat-card-actions>
+    <div class="button">
+    <button mat-raised-button (click)="getOTP()">Reenviar correo</button>
+    </div>
+  </mat-card-actions>
+  <div id="sign-button-phone"></div>
+  <input type="text" placeholder="Phone Number" [(ngModel)]="phoneNumber">
+</mat-card>
+</div>

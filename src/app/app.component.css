@@ -1,0 +1,19 @@
+
+/* Se aplica en todos los componentes */
+.body{
+  background-color: var(--main-color);
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.mat-card{
+  max-width: 600px;
+}
+
+
+

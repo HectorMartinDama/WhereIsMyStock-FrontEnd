@@ -1,0 +1,88 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import url('https://rsms.me/inter/inter.css');
+
+
+// Variables Globales.
+$dark: #303030;
+$light: #FFFFFF;
+// No recomendable usarlas porque fallan mucho. => Variables globales.
+
+/*{
+  font-family: Verdana;
+}*/
+
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: 'Inter';
+    font-weight: 400;
+  }
+}
+
+// Tema Claro (por defecto).
+:root{
+  --main-color: #FFFFFF;
+  --text-color: #303030;
+  --navbar-text: #666666;
+  --navbar-title: #303030;
+  --navbar-color: #FFFFFF;
+  --navbar-icons: #303030;
+  --navbar-icons-hover: #000000;
+  --color-button-signUp: #000000;
+  --navbar-button-signUp-text: #FFFFFF;
+  --sidebar-color: #FFFFFF;
+  --sidebar-text: #666666;
+  --notification-color: #303030;
+  --notification-text: #FFFFFF;
+  --pageNotFound-color: #303030;
+  --profileAccountMenu-color: #FFFFFF;
+  --profileAccountMenu-icons: #303030;
+  --footer-color: #FAFAFA;
+  --footer-link-hover: #000000;
+  --footer-link-color: #666666;
+  --footer-title-color: #000000;
+  --footer-text: #666666;
+}
+
+// Color Principal de la pagina.
+.style{
+  background-color: var(--main-color);
+}
+
+// Tema Oscuro.
+[data-theme="dark"]{
+  --main-color: #000000;
+  --text-color: #FFFFFF;
+  --navbar-text: #888888;
+  --navbar-color: #000000;
+  --navbar-title: #FFFFFF;
+  --navbar-icons: #FFFFFF;
+  --navbar-icons-hover: #FFFFFF;
+  --color-button-signUp: #FFFFFF;
+  --navbar-button-signUp-text: #000000;
+  --sidebar-color: #202124;
+  --sidebar-text: #888888;
+  --notification-color: #FFFFFF;
+  --notification-text: #000000;
+  --pageNotFound-color: #FFFFFF;
+  --profileAccountMenu-color: #202124;
+  --profileAccountMenu-text: #FFFFFF;
+  --profileAccountMenu-icons: #FFFFFF;
+  --footer-color: #111111;
+  --footer-link-hover: #FFFFF;
+  --footer-link-color: #888888;
+  --footer-title-color: #FFFFFF;
+  --footer-text: #666666;
+}
+
+// Estilo de las notificaciones segun el Tema de la pagina.
+.style-notification{
+  background-color: var(--notification-color);
+  color: var(--notification-text);
+}
+
+
+
+
+

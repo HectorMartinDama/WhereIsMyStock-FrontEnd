@@ -1,0 +1,59 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === true">
+    <mat-toolbar></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="registerProduct">Registrar Producto</a>
+      <a mat-list-item href="#">Mis productos</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <!-- Espacio entre los iconos de la Barra superior -->
+      <div class="flex-container">
+      <a routerLink="" class="navbar_item links">Inicio</a>
+      <a class="navbar_item links" routerLink="/registerProduct" >Registrar Producto</a>
+      <a class="navbar_item links" routerLink="/products">Mis productos</a>
+      </div>
+      <!-- Icono para cambiar de tema en angular | dark_mode (luna) | light_mode (sol) -->
+      <button mat-icon-button (click)="changeTheme()" type="button" aria-label="Boton para el modo oscuro" >
+        <mat-icon role="img">{{icon}}</mat-icon>
+      </button>
+      <!-- Si el usuario no ha iniciado sesión, se le mostrara el boton de inicio de sesión -->
+      <ng-template #notLogged>
+        <button mat-button class="login-button" routerLink="/login">Sign up</button>
+      </ng-template>
+      <!-- Menu desplegable usuario, se mostrara si se ha iniciado sesión -->
+      <div *ngIf="user$ | async as user; else notLogged">
+        <!-- Si el usuario ha iniciado sesión con google se le pondra su foto de perfil, si no una predeterminada. -->
+        <div *ngIf="profile; else profileDefault">
+          <input [matMenuTriggerFor]="menu" type="image" [src]="user.photoURL" class="profile-image-navbar"/>
+        </div>
+        <ng-template #profileDefault>
+          <input [matMenuTriggerFor]="menu" type="image" src="assets/images/profilePicture.jpg" class="profile-image-navbar"/>
+        </ng-template>
+      <!-- Submenu para la configuración de la cuenta -->
+      <div class="flex-container-profile-account">
+      <mat-menu #menu="matMenu" class="profile-account-menu">
+        <img [src]="user.photoURL" class="profile-image-menu">
+        <hr>
+        <button mat-menu-item (click)="onLogout()"><mat-icon class="profile-account-menu-icons">logout</mat-icon>Cerrar Sesión</button>
+      </mat-menu>
+      </div>
+      </div>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- Permite el uso navegación por enrutamiento. Más info: https://docs.angular.lat/tutorial/toh-pt5 -->
+<router-outlet></router-outlet>
+

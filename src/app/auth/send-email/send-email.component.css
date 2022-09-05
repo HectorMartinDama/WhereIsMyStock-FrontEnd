@@ -1,0 +1,17 @@
+.confirmacionCuenta{
+  max-width: 510px;
+  background-color: #303846;
+}
+
+.button{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 230px;
+}
+

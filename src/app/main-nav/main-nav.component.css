@@ -1,0 +1,126 @@
+/* IMPORTANTE CAMBIAR LOS COMENTARIOS Y LAS VARIABLES EN UN SOLO IDIOMA
+   SOLO INGLE O ESPAÑOL (CASTELLANO). LOS DOS IDIOMAS MEZACLADOS NO. */
+
+a{
+  font-weight: 400;
+}
+/* Resto de la pagina */
+.sidenav-container {
+  height: 8%;
+}
+
+/* Menu Desplegable  */
+.sidenav {
+  width: 200px;
+  background-color: var(--sidebar-color);
+}
+
+/* Imagen de perfil en la barra de navegación */
+.profile-image-navbar{
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+/* Imagen del perfil en el menu de la cuenta */
+.profile-image-menu{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.login-button{
+  color: var(--navbar-button-signUp-text);
+  background-color: var(--color-button-signUp);
+  border-radius: 5px;
+  text-align: center;
+  width: 80px;
+  height: 35px;
+}
+
+/* Elementos de la barra de navegación  */
+.navbar_item{
+  color: var(--navbar-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-top: 16px;
+  padding-right: 22px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* Background color del menu de la cuenta */
+::ng-deep .profile-account-menu {
+  background: var(--profileAccountMenu-color);
+}
+
+/* Color de los iconos del menu de la cuenta */
+.mat-icon{
+  color: var(--profileAccountMenu-icons);
+}
+
+/* Color del texto del menu de la cuenta  */
+.mat-menu-item{
+  color: var(--profileAccountMenu-text);
+  font-size: 14px;
+}
+
+
+/* Permite alinear los elementos de la barra de navegación */
+.flex-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Permite alienar el menu de la cuenta de usuario */
+.flex-container-profile-account{
+}
+
+
+.links:hover{
+  transition: 0.5s;
+  color: var(--navbar-icons-hover);
+}
+
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+/* Barra Superior de Navegación */
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--navbar-color);
+  color: var(--navbar-icons);
+}
+
+/* Cambiar desplegable por barra lateral */
+.mat-list-item{
+  color: var(--sidebar-text);
+  font-size: 14px;
+}
+
+
+.navbar_title{
+  color: var(--navbar-title);
+  text-decoration: none;
+}
+
+/* Deja un espacion entre los iconos de la barra de navagacion superior */
+.espacio-iconos {
+  flex: 1 1 auto;
+}
+
+/* Comprueba si ha pulsado el boton */
+button{
+  cursor: pointer;
+}
+
+

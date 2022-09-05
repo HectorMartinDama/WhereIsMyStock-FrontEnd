@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "whereismystock": {
+      "hosting": {
+        "ProyectoAngular": [
+          "whereismystock"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "whereismystock"
+  }
+}

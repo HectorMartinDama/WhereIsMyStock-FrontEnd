@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  min-width: 350px;
+}
+
+.container-prueba{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-card-title{
+  margin-bottom: 20px;
+}
+
+hr{
+  color: #FFFFFF;
+}
+
+.link{
+  color: #0070F3;
+}
+
+.card{
+  background-color: #303846;
+  border-radius: 20px;
+}
+
+.login{
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-form-field{
+  width: 100%;
+  min-width: 300px;
+}
+
+
+/* Alinea el boton del Formulario a la derecha */
+.button{
+  display: flex;
+  justify-content: flex-end;
+}
+
