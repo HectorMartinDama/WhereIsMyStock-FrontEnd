@@ -19,8 +19,8 @@
       <!-- Espacio entre los iconos de la Barra superior -->
       <div class="flex-container">
       <a routerLink="" class="navbar_item links">Inicio</a>
-      <a class="navbar_item links" routerLink="/registerProduct" >Registrar Producto</a>
-      <a class="navbar_item links" routerLink="/products">Mis productos</a>
+      <a class="navbar_item links" routerLink="/registerProduct" >Crear Notas</a>
+      <a class="navbar_item links" routerLink="/products">Mis notas</a>
       </div>
       <!-- Icono para cambiar de tema en angular | dark_mode (luna) | light_mode (sol) -->
       <button mat-icon-button (click)="changeTheme()" type="button" aria-label="Boton para el modo oscuro" >
@@ -28,7 +28,7 @@
       </button>
       <!-- Si el usuario no ha iniciado sesión, se le mostrara el boton de inicio de sesión -->
       <ng-template #notLogged>
-        <button mat-button class="login-button" routerLink="/login">Sign up</button>
+        <button mat-button class="login-button" routerLink="/login">Inicar sesión</button>
       </ng-template>
       <!-- Menu desplegable usuario, se mostrara si se ha iniciado sesión -->
       <div *ngIf="user$ | async as user; else notLogged">

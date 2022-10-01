@@ -35,6 +35,8 @@ import { AngularFireMessagingModule} from '@angular/fire/compat/messaging';
 // Imports Google Fuctions
 import { AngularFireFunctionsModule } from "@angular/fire/compat/functions";
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmaDialogComponent } from './shared/confirma-dialog/confirma-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterProductComponent,
     PageNotFoundComponent,
     ProductsComponent,
+    ConfirmaDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
+    MatDialogModule,
+    FormsModule,
     // Inicia la conexión con Authentication FireBase.
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
@@ -78,6 +84,7 @@ import { HttpClientModule } from '@angular/common/http';
     // Peticiones HTTP
     HttpClientModule
   ],
+  entryComponents: [ConfirmaDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

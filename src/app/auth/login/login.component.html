@@ -1,32 +1,23 @@
 <div class="container">
-  <div>
-    <div>
-      <mat-card class="card">
-        <mat-card-title>Iniciar Sesión</mat-card-title>
-        <mat-card-content>
-          <form [formGroup]="form">
-            <mat-form-field>
-              <input type="email" matInput placeholder="Dirección de correo electrónico" formControlName="email">
-            </mat-form-field>
+  <form [formGroup]="form">
+    <h1 class="title h1">Iniciar Sesión</h1>
+    <span style="margin-top: 24px;"></span>
+    <input class="inputs" placeholder="Dirección de correo electrónico" type="email" matInput placeholder="Dirección de correo electrónico" formControlName="email">
+    <span style="margin-top: 12px;"></span>
+    <input class="inputs" type="password" matInput placeholder="Contraseña" formControlName="password">
+    <span style="margin-top: 42px;"></span>
 
-            <mat-form-field>
-              <mat-label>Contraseña</mat-label>
-              <input type="password" matInput formControlName="password">
-            </mat-form-field>
 
-            <br>
-            <button mat-button (click)="this.authSvc.loginWithGoogle()"><img src="assets/images/icons/loginGoogle.svg"></button>
-            <button mat-button (click)="loginGithub()"><img src="assets/images/icons/github-svgrepo-com(1).svg"></button>
-            <br>
 
-            <div class="button">
-              <button type="button" mat-button (click)="login()">Siguiente</button>
-            </div>
-          </form>
-        </mat-card-content>
-      </mat-card>
+    <button class="btnGoogle buttonsLogin" mat-button (click)="this.authSvc.loginWithGoogle()">Continuar con Google<img src="assets/images/icons/iconGoogle.svg"  [hspace]="10"></button>
+    <span style="margin-top: 12px;"></span>
+    <button class="btnGitHub buttonsLogin" mat-button (click)="loginGithub()">Continuar con GitHub<img src="assets/images/icons/iconGitHub.svg" [hspace]="10"></button>
+    <span style="margin-top: 12px;"></span>
+    
+    <div class="submit">
+      <button class="button" type="button" mat-button (click)="login()">Siguiente</button>
     </div>
-  </div>
+  </form>
 </div>
 <hr>
 <div class="container-prueba">

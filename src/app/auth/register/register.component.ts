@@ -37,11 +37,17 @@ export class RegisterComponent implements OnInit {
     const {email, password} = this.form.value; // Extrae el email y la constraseña del formulario.
     const user= await this.authSvc.register(email, password);
     if (user){
-      this.emailService.welcomeEmail(email);
+      const usuario= await this.authSvc.getCurrentUser();
+      if(usuario){
+        this.authSvc.saveUser(usuario.uid, email)
+      }
+      this.emailService.welcomeEmail(email); // email de bienvenida
       // Redirecciona a la pagina de Verificación de Cuenta por email.
       this.router.navigate(['register/confirmAccount']);
     }
   }
+
+
 
   // Devuelve el email escrito en el formulario de Registro.
   get email(): FormControl{

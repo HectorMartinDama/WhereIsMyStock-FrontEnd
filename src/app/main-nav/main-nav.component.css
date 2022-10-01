@@ -33,9 +33,11 @@ a{
   color: var(--navbar-button-signUp-text);
   background-color: var(--color-button-signUp);
   border-radius: 5px;
+  height: 34px;
+  width: 110px;
+  padding-right: 110px;
   text-align: center;
-  width: 80px;
-  height: 35px;
+  font-size: 2px;
 }
 
 /* Elementos de la barra de navegación  */
@@ -69,7 +71,6 @@ a{
   font-size: 14px;
 }
 
-
 /* Permite alinear los elementos de la barra de navegación */
 .flex-container{
   display: flex;
@@ -77,16 +78,11 @@ a{
   justify-content: center;
 }
 
-/* Permite alienar el menu de la cuenta de usuario */
-.flex-container-profile-account{
-}
-
 
 .links:hover{
   transition: 0.5s;
   color: var(--navbar-icons-hover);
 }
-
 
 .sidenav .mat-toolbar {
   background: inherit;

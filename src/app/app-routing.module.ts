@@ -3,11 +3,11 @@ import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from "./auth/login/login.component";
 import {RegisterComponent} from "./auth/register/register.component";
 import {SendEmailComponent} from "./auth/send-email/send-email.component";
-import {RegisterProductComponent} from "./register-product/register-product.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
-import {FooterComponent} from "./footer/footer.component";
-import {ProductsComponent} from "./products/products.component";
+import { RegisterProductComponent } from './register-product/register-product.component';
+import { ProductsComponent } from './products/products.component';
+import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const redirectUnautorizedToLogin  = () => redirectUnauthorizedTo(['']);
 
 
